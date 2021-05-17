@@ -1,0 +1,18 @@
+@import '../../../variables.scss';
+
+.sortBtn {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: $mainColor;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.active {
+  background-color: red;
+  color: white;
+}
+.sortHeading {
+  font-weight: bold;
+}

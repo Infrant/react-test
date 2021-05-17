@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: $mainColor;
+  cursor: pointer;
+}
+.tableCell {
+  padding: 10px;
+  border: 1px solid black;
+}
+.tableRowHidden {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: lighten(grey, 40%);
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  &Cell {
+    display: flex;
+    flex-direction: column;
+
+    &Heading {
+      font-weight: bold;
+    }
+  }
+}
