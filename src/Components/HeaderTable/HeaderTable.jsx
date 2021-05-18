@@ -4,14 +4,27 @@ import Search from './Search/Search';
 import Sort from './Sort/Sort';
 import style from './HeaderTable.module.scss';
 
-const HeaderTable = ({ filter, isActiveSort, setIsActiveSort, makeSort }) => {
+const HeaderTable = ({
+  filter,
+  isActiveSort,
+  setIsActiveSort,
+  makeSort,
+  isActiveGroup,
+  setIsActiveGroup,
+  makeGroup,
+}) => {
   return (
     <div className={style.headerTableWrapper}>
-      <Group />
+      <Group
+        isActiveGroup={isActiveGroup}
+        setIsActiveGroup={setIsActiveGroup}
+        makeGroup={makeGroup}
+      />
       <Sort
         isActiveSort={isActiveSort}
         setIsActiveSort={setIsActiveSort}
         makeSort={makeSort}
+        isActiveGroup={isActiveGroup}
       />
       <Search filter={filter} />
     </div>
@@ -20,9 +33,12 @@ const HeaderTable = ({ filter, isActiveSort, setIsActiveSort, makeSort }) => {
 
 HeaderTable.propTypes = {
   isActiveSort: PropTypes.string,
+  isActiveGroup: PropTypes.string,
   filter: PropTypes.func,
   setIsActiveSort: PropTypes.func,
+  setIsActiveGroup: PropTypes.func,
   makeSort: PropTypes.func,
+  makeGroup: PropTypes.func,
 };
 
 export default HeaderTable;

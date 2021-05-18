@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import style from './Sort.module.scss';
 
-const Sort = ({ isActiveSort, setIsActiveSort, makeSort }) => {
+const Sort = ({ isActiveSort, setIsActiveSort, makeSort, isActiveGroup }) => {
   const [sort, setSort] = useState([
     { id: '1', sortName: 'mark' },
     { id: '2', sortName: 'type' },
@@ -22,6 +22,7 @@ const Sort = ({ isActiveSort, setIsActiveSort, makeSort }) => {
 
   const sortEl = sort.map(({ id, sortName }) => (
     <button
+      disabled={isActiveGroup === id}
       data-id={id}
       data-sortname={sortName}
       key={id}

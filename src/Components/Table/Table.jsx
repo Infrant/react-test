@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import style from './Table.module.scss';
+import TableGroup from './TableGroup';
 
 const Table = ({
   tableDataFiltered,
@@ -7,6 +8,19 @@ const Table = ({
   markTableOpen,
   markTableClose,
 }) => {
+  if (
+    tableDataFiltered[0]?.parent === null &&
+    tableDataFiltered[0]?.parent !== undefined
+  ) {
+    return (
+      <TableGroup
+        tableDataFiltered={tableDataFiltered}
+        isTableOpen={isTableOpen}
+        markTableOpen={markTableOpen}
+        markTableClose={markTableClose}
+      />
+    );
+  }
   const tableEl = tableDataFiltered.map(car => (
     <div
       key={car.ID}

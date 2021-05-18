@@ -1,22 +1,18 @@
 @import '../../../variables.scss';
 
-.sortBtn {
+.groupBtn {
   outline: none;
   cursor: pointer;
   border: none;
   background-color: $mainColor;
   padding: 5px;
   margin-right: 5px;
-
-  &:disabled {
-    cursor: not-allowed;
-  }
 }
 
 .active {
   background-color: red;
   color: white;
 }
-.sortHeading {
+.groupHeading {
   font-weight: bold;
 }
