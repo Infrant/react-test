@@ -7,6 +7,11 @@
   background-color: $mainColor;
   padding: 5px;
   margin-right: 5px;
+  transition-duration: 0.3s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 
   &:disabled {
     cursor: not-allowed;

@@ -5,6 +5,10 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: $mainColor;
   cursor: pointer;
+
+  &:hover {
+    background-color: lighten($mainColor, 20%);
+  }
 }
 .tableCell {
   padding: 10px;
